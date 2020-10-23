@@ -34,7 +34,7 @@ void do_more( FILE* fp )
     int see_more(), reply;
     while (fgets(line, LINELEN, fp)) {
         if (num_of_lines == PAGELEN) {
-            reply = see_more;
+            reply = see_more();
             if (reply == 0)
                 break;
             num_of_lines++;
